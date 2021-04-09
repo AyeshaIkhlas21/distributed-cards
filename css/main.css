@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: "Georgia, serif";
+  font-family: Georgia, serif;
   line-height: 1.5;
   background-color: #f5f2f0;
 }
@@ -22,17 +22,28 @@ img {
 - *Gaps:* `1rem`
 - *Border-thicknesses*: `2px`
 - *Corner-radii:* `8px`
- */
+*/
 
 body {
   margin: 0;
 }
 
-h1,
+body main ol {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+body h1,
 h2 {
   color: #623b0c;
-  padding: 0;
   font-family: "Denk One";
+  margin: 1rem;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
 }
 
 main {
@@ -44,31 +55,38 @@ main {
 }
 
 ol {
-  padding: 0;
+  padding: .5em .75em .6em;
   margin: 0;
-
-  display: flex;
-  gap: 1em;
 }
 
-ol li {
-  width: 50%;
-  padding: .5em;
+ol > li {
+  border: 2px solid #623b0c;
+  border-radius: 8px;
+  background-color: #ede3db;
+  padding: 1rem;
+  margin: 1rem;
 
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 p {
   flex-grow: 1;
 }
 
-@media screen and (min-width: 60em) {
-/* screen with wrapper */
-  main {
-    max-width: 90em;
-    margin: 0 auto;
-  }
+a {
+  border: 2px solid #623b0c;
+  background-color: #623b0c;
+  color: #fff;
+  font-weight: normal;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+
+  padding: .5em 1.5em .7em;
+}
+
+h2 + img {
+  max-width: 100%;
+  line-height: 1.5;
 }
