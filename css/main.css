@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-family: "Georgia, serif";
   line-height: 1.5;
-  background-color: #ede3db;
+  background-color: #f5f2f0;
 }
 
 *, *::before, *::after {
@@ -44,17 +44,31 @@ main {
 }
 
 ol {
+  padding: 0;
+  margin: 0;
+
   display: flex;
+  gap: 1em;
 }
 
 ol li {
   width: 50%;
   padding: .5em;
+
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
 
 p {
   flex-grow: 1;
+}
+
+@media screen and (min-width: 60em) {
+/* screen with wrapper */
+  main {
+    max-width: 90em;
+    margin: 0 auto;
+  }
 }
